@@ -1,0 +1,2 @@
+app/app-wdio.apk[[:space:]]*.psd filter=lfs diff=lfs merge=lfs -text
+chromedriver.exe[[:space:]]*.psd filter=lfs diff=lfs merge=lfs -text

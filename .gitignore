@@ -137,3 +137,10 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+app/app-wdio.apk
+app-wdio.apk
+chromedriver-mobile/chromedriver.exe 
+chromedriver.exe 
+app/app-wdio.apk
+*.apk 
+*.exe

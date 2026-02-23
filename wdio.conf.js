@@ -50,7 +50,7 @@ export const config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
+    capabilities: [/* {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
         browserName: 'Chrome',
@@ -58,8 +58,16 @@ export const config = {
         'appium:platformVersion': '11.0',
         'appium:automationName': 'UiAutomator2',
         'appium:chromedriverAutodowload': true,
-        'appium:chromedriverExecutable': 'chromedriver-mobile\chromedriver.exe'
-    }],
+        'appium:chromedriverExecutable': 'chromedriver-mobile/chromedriver.exe'
+    }, */
+        {
+            "platformName": "Android",
+            "appium:automationName": "Uiautomator2",
+            "appium:deviceName": "nightwatch-android-11",
+            "appium:platformVersion": "11.0",
+            "appium:app": "app/app-wdio.apk"
+        }
+    ],
 
     //
     // ===================
@@ -117,7 +125,7 @@ export const config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
