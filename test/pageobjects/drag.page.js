@@ -81,6 +81,17 @@ class DragPage {
         await leftEar.dragAndDrop(leftEarDrop);
         await leftHand.dragAndDrop(leftHandDrop);
     }
+    async puzzleSolve1(){
+        await this.leftArm.dragAndDrop(this.leftArmDrop);
+        await this.rightHand.dragAndDrop(this.rightHandDrop);
+        await this.rightEar.dragAndDrop(this.rightEarDrop);
+        await this.eyes.dragAndDrop(this.eyesDrop);
+        await this.pants.dragAndDrop(this.pantsDrop);
+        await this.rightArm.dragAndDrop(this.rightArmDrop);
+        await this.belly.dragAndDrop(this.bellyDrop);
+        await this.leftEar.dragAndDrop(this.leftEarDrop);
+        await this.leftHand.dragAndDrop(this.leftHandDrop);
+    }
 }
 
 export default new DragPage()
