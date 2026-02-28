@@ -15,10 +15,10 @@ describe("Testes na tela DragDrop", () => {
         await browser.pause(2000);
     });
 
-    it.skip("Deve montar o quebra-cabeça completo com dragAndDrop", async () => {
+    it.only("Deve montar o quebra-cabeça completo com dragAndDrop", async () => {
         //DESAFIO: Implementar o drag and drop para todas as peças aqui 
 
-        
+        await dragPage.puzzleSolve()
 
         //Resultado esperado, só depois de completar o quebra cabeça
         const mensagem = await $('android=new UiSelector().text("Congratulations")');
