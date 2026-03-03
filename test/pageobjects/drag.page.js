@@ -66,22 +66,6 @@ class DragPage {
         await menu.click();
     }
     async puzzleSolve() {
-        const [leftArm, rightHand, rightEar, eyes, pants, rightArm, belly, leftEar, leftHand] = [$('~drag-l2'), $('~drag-r3'), $('~drag-r1'), $('~drag-c1'),
-        $('~drag-c3'), $('~drag-r2'), $('~drag-c2'), $('~drag-l1'), $('~drag-l3')]
-        const [leftEarDrop, eyesDrop, rightEarDrop, leftArmDrop, bellyDrop, rightArmDrop, leftHandDrop, pantsDrop, rightHandDrop] = [$('~drop-l1'), $('~drop-c1'), $('~drop-r1'), $('~drop-l2')
-            , $('~drop-c2'), $('~drop-r2'), $('~drop-l3'), $('~drop-c3'), $('~drop-r3')
-        ]
-        await leftArm.dragAndDrop(leftArmDrop);
-        await rightHand.dragAndDrop(rightHandDrop);
-        await rightEar.dragAndDrop(rightEarDrop);
-        await eyes.dragAndDrop(eyesDrop);
-        await pants.dragAndDrop(pantsDrop);
-        await rightArm.dragAndDrop(rightArmDrop);
-        await belly.dragAndDrop(bellyDrop);
-        await leftEar.dragAndDrop(leftEarDrop);
-        await leftHand.dragAndDrop(leftHandDrop);
-    }
-    async puzzleSolve1(){
         await this.leftArm.dragAndDrop(this.leftArmDrop);
         await this.rightHand.dragAndDrop(this.rightHandDrop);
         await this.rightEar.dragAndDrop(this.rightEarDrop);
