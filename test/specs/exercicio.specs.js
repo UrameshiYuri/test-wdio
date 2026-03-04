@@ -7,14 +7,15 @@ describe('deve fazer uma conta nova e logar', () => {
     });
 
     afterEach(async () => {
+        await browser.relaunchActiveApp()
     });
 
-    it('cenario de teste', async () => {
-        await exercicioPage.signupPage()
+    it('deve criar conta', async () => {
         await exercicioPage.criarConta('teste@teste.com', '12345678')
-        await loginPage.preencherLogin('teste@teste2.com', '12345677¡8')
-        await loginPage.mensagemAlerta()
-        //await expect(mensagem).toBeDisplayed()
-        await driver.pause(10000)
+        await exercicioPage.mensagemSucessoSignUp('Signed Up!')
+    });
+    it('deve fazer login', async () => {
+        await loginPage.preencherLogin('teste@login.com', '12345678')
+        expect(await loginPage.mensagemAlerta()).toEqual('You are logged in!')
     });
 });

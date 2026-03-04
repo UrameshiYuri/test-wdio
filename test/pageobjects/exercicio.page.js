@@ -21,23 +21,24 @@ class signUp {
     get botaoLogin() {
         return $('~button-login-container')
     }
+    get mensagemSucesso(){
+        return $('/hierarchy/android.widget.FrameLayout')
+    }
     //metodos
-    async criarConta(emailCria, senhaCria) {
+    async criarConta(email, senha) {
+        await this.signupBotao.click()
         await this.criarEmail.clearValue()
-        await this.criarEmail.setValue(emailCria)
+        await this.criarEmail.setValue(email)
         await this.criarSenha.clearValue()
         await this.criarSenha.setValue(senha)
         await this.repetirSenha.clearValue()
-        await this.repetirSenha.setValue(senhaCria)
+        await this.repetirSenha.setValue(senha)
         await this.botaoCriar.click()
         await this.botaoLogin.click()
     }
-    async signupPage() {
-        await this.signupBotao.click()
-    }
-    async botaoConfirmarPopUp() {
-        const botao = ('~android:id/button1')
-        await botao.click()
-    }
+    async mensagemSucessoSignUp () {
+       return await this.mensagemSucesso.getText()
+    }   
+
 }
 export default new signUp()
