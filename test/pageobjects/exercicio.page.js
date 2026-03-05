@@ -28,6 +28,7 @@ class signUp {
         return $('~android:id/button1')
     }
     //metodos
+    //cria um metodo onde cria a conta direto
     async criarConta(email, senha) {
         await this.signupBotao.click()
         await this.criarEmail.clearValue()
@@ -42,10 +43,12 @@ class signUp {
     async mensagemSucessoSignUp() {
         return await this.mensagemSucesso.getText()
     }
+    //clica em OK qnd a mensagem de pop up aparece para dar continuidade ao teste
     async confirmarMensagem() {
         const el1 = await driver.$("id:android:id/button1");
         await el1.click();
     }
 
 }
+// exporta essa classe inteira para qualquer teste q eu quiser usar
 export default new signUp()

@@ -1,6 +1,5 @@
 import loginPage from "../pageobjects/login.page";
 import exercicioPage from "../pageobjects/exercicio.page";
-
 describe('deve fazer uma conta nova e logar', () => {
     beforeEach(async () => {
         loginPage.abrirMenu()
@@ -11,6 +10,7 @@ describe('deve fazer uma conta nova e logar', () => {
     });
 
     it('deve criar conta', async () => {
+        //usamos os metodos criados para deixa o teste mais pratico
         await exercicioPage.criarConta('teste@teste.com', '12345678')
         await exercicioPage.mensagemSucessoSignUp('Signed Up!')
         await exercicioPage.confirmarMensagem()
