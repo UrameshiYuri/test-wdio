@@ -21,8 +21,11 @@ class signUp {
     get botaoLogin() {
         return $('~button-login-container')
     }
-    get mensagemSucesso(){
+    get mensagemSucesso() {
         return $('/hierarchy/android.widget.FrameLayout')
+    }
+    get botaoOk() {
+        return $('~android:id/button1')
     }
     //metodos
     async criarConta(email, senha) {
@@ -36,9 +39,13 @@ class signUp {
         await this.botaoCriar.click()
         await this.botaoLogin.click()
     }
-    async mensagemSucessoSignUp () {
-       return await this.mensagemSucesso.getText()
-    }   
+    async mensagemSucessoSignUp() {
+        return await this.mensagemSucesso.getText()
+    }
+    async confirmarMensagem() {
+        const el1 = await driver.$("id:android:id/button1");
+        await el1.click();
+    }
 
 }
 export default new signUp()

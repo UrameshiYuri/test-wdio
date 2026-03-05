@@ -13,8 +13,7 @@ describe('deve fazer uma conta nova e logar', () => {
     it('deve criar conta', async () => {
         await exercicioPage.criarConta('teste@teste.com', '12345678')
         await exercicioPage.mensagemSucessoSignUp('Signed Up!')
-    });
-    it('deve fazer login', async () => {
+        await exercicioPage.confirmarMensagem()
         await loginPage.preencherLogin('teste@login.com', '12345678')
         expect(await loginPage.mensagemAlerta()).toEqual('You are logged in!')
     });
